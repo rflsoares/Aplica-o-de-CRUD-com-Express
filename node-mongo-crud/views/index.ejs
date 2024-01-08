@@ -6,6 +6,12 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <ul>
+      <% docs.forEach(function(customer){ %>
+        <li>
+            <%= customer.name %> <%= customer.sobrenome %> - <b>Age: </b><%= customer.age %> years old.
+        </li>
+      <% }) %>
+    </ul>
   </body>
 </html>
