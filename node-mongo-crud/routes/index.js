@@ -17,7 +17,7 @@ router.get('/new', (req, res, next) => {
   res.render('new', { title: 'Novo Cadastro', doc: {'name':'','age':''}, action: '/new' });
 });
 
-router.post('new,', async (req, res, next) => {
+router.post('/new', async (req, res, next) => {
   const name = req.body.name;
   const age = parseInt(req.body.age);
 

@@ -5,3 +5,5 @@
 - https://www.luiztools.com.br/post/tutorial-crud-em-node-js-com-driver-nativo-do-mongodb/
 
 - Instalação do mongoDB no Debian: https://blog.cod3r.com.br/como-instalar-o-mongodb-no-linux-ubunt-20-04/
+
+- Start the server mongodb: sudo systemctl start mongod

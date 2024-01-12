@@ -19,22 +19,16 @@ async function findAll() {
     return db.collection(COLLECTION).find().toArray();
 } 
 
-module.exports = { findAll }
-
 async function insert(customer) {
     const db = await connect();
     return db.collection(COLLECTION).insertOne(customer);
 }
 
-module.exports = { findAll, insert }
-
-const ObjectId = require('mongodb').ObjectId;
+const xObjectId = require('mongodb').ObjectId;
 async function findOne(id) {
     const db = await connect();
-    return db.collection(COLLECTION).findOne({_id: new ObjectId(id)});
+    return db.collection(COLLECTION).findOne({_id: new xObjectId(id)});
 }
-
-module.exports = { findAll, insert, findOne }
 
 async function update(id, customer) {
     const db = await connect();
